@@ -1,0 +1,5 @@
+name: ConfigFile
+main: xyz.houtian17.configfile.ConfigFile
+version: 0.1
+author: Houtian
+commandds:
