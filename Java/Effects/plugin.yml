@@ -1,8 +1,0 @@
-name: Effects
-main: xyz.houtian17.effects.Effects
-version: 0.1
-author: Houtian
-commands:
-  effect:
-      description: Spawns specified effect on player loaction.
-      usage: /effect <tp>
