@@ -2,6 +2,18 @@ package notebook;
 
 import java.util.ArrayList;
 
+class Value {
+    private int i;
+
+    public void set(int i) {
+        this.i = i;
+    }
+
+    public int get() {
+        return i;
+    }
+}
+
 public class NoteBook {
 
     private ArrayList<String> notes = new ArrayList<String>();
@@ -40,16 +52,28 @@ public class NoteBook {
     }
 
     public static void main(String[] args) {
-        NoteBook nb = new NoteBook();
-        nb.add("first");
-        nb.add("second");
-        nb.add("third", 1);
-        System.out.println(nb.getSize());
-        System.out.println(nb.getNote(2));
-        nb.removeNote(1);
-        String[] a = nb.list();
-        for (String s : a) {
-            System.out.println(s);
+
+
+        Value[] a = new Value[10];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = new Value();
+            a[i].set(i);
         }
+        for (Value v : a) {
+            System.out.println(v.get());
+            v.set(0);
+        }
+
+//        NoteBook nb = new NoteBook();
+//        nb.add("first");
+//        nb.add("second");
+//        nb.add("third", 1);
+//        System.out.println(nb.getSize());
+//        System.out.println(nb.getNote(2));
+//        nb.removeNote(1);
+//        String[] a = nb.list();
+//        for (String s : a) {
+//            System.out.println(s);
+//        }
     }
 }
