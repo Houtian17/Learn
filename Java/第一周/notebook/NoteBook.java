@@ -1,6 +1,7 @@
 package notebook;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 class Value {
     private int i;
@@ -11,6 +12,10 @@ class Value {
 
     public int get() {
         return i;
+    }
+
+    public String toString() {
+        return "" + i;
     }
 }
 
@@ -53,15 +58,28 @@ public class NoteBook {
 
     public static void main(String[] args) {
 
+        Value a=new Value();
+        a.set(10);
+        System.out.println(a);
 
-        Value[] a = new Value[10];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = new Value();
-            a[i].set(i);
-        }
-        for (Value v : a) {
-            System.out.println(v.get());
-            v.set(0);
+
+//        Value[] a = new Value[10];
+
+//        for (int i = 0; i < a.length; i++) {
+//            a[i] = new Value();
+//            a[i].set(i);
+//        }
+//        for (Value v : a) {
+//            System.out.println(v.get());
+//            v.set(0);
+//        }
+
+        HashSet<String> s = new HashSet<String>();
+        s.add("a");
+        s.add("b");
+        s.add("a");
+        for (String k : s) {
+            System.out.println(k);
         }
 
 //        NoteBook nb = new NoteBook();
