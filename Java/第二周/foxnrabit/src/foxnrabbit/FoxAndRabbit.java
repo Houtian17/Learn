@@ -8,13 +8,25 @@ import field.View;
 import animal.Fox;
 import field.Field;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class FoxAndRabbit {
     private Field theField;
     private View theView;
+    private JFrame frame;
+
+    class StepListener implements ActionListener {//内部类
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            step();
+            frame.repaint();
+        }
+    }
 
     public FoxAndRabbit(int size) {
         theField = new Field(size, size);
@@ -28,12 +40,22 @@ public class FoxAndRabbit {
                 }
             }
         }
-        theView = new View(theField);
-        JFrame frame = new JFrame();
+        theView = new View(theField);//画网格 容器
+        frame = new JFrame();//容器
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setTitle("Cells");
         frame.add(theView);
+        JButton btnStep = new JButton("单步");
+        frame.add(btnStep, BorderLayout.NORTH);
+        btnStep.addActionListener(new StepListener());
+//      btnStep.addActionListener(new ActionListener() {//匿名内部类
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                step();
+//                frame.repaint();
+//            }
+//        });
         frame.pack();
         frame.setVisible(true);
     }
@@ -59,7 +81,7 @@ public class FoxAndRabbit {
                     animal.grow();
                     if (animal.isAlive()) {
                         //move
-                        Location loc = animal.move(theField.getFreeNeighbour(row,col));
+                        Location loc = animal.move(theField.getFreeNeighbour(row, col));
                         if (loc != null) {
                             theField.move(row, col, loc);
                         }
@@ -91,9 +113,6 @@ public class FoxAndRabbit {
     }
 
     public static void main(String[] args) {
-        FoxAndRabbit fnr=new FoxAndRabbit(50);
-        fnr.start(100);
+        FoxAndRabbit fnr = new FoxAndRabbit(40);
     }
-
-
 }
