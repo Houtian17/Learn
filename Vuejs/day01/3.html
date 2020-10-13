@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+</head>
+<body>
+<div id="vue_det">
+    <h1>site:{{site}}</h1>
+    <h1>url:{{url}}</h1>
+    <h1>Alexa:{{alexa}}</h1>
+</div>
+
+<script type="text/javascript">
+    var data = {site: "cainiao", url: "baiducom", alexa: 10000}
+    var vm = new Vue({
+        el: '#vue_det',
+        data: data
+    })
+    document.write(vm.site === data.site)
+    document.write("<br>")
+    vm.site = "runnoob"
+    document.write(data.site + "<br>")
+    data.alexa = 1234
+    document.write(vm.alexa)
+</script>
+
+
+</body>
+</html>

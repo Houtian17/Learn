@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+</head>
+<body>
+<div id="vue_det">
+    <h1>site: {{site}}</h1>
+    <h1>url: {{url}}</h1>
+    <h1>{{details()}}</h1>
+</div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#vue_det',
+        data: {
+            site: "cainiao",
+            url: "runnoob.com",
+            alexa: "11000"
+        },
+        methods: {
+            details: function () {
+                return this.site + "-details"
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>

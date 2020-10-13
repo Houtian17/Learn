@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <p>{{site}}</p>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'google',
+            url: 'baidu.com'
+        },
+        computed: {
+            site: {
+                get: function () {
+                    return this.name + ' ' + this.url
+                },
+                set: function (newValue) {
+                    var names = newValue.split(' ')
+                    this.name = names[0]
+                    this.url = names[names.length - 1]
+                }
+            }
+        }
+    })
+
+    vm.site = '菜鸟教程 http://www.runoob.com';
+    document.write('name:' + vm.name);
+    document.write('<br>');
+    document.write('url:' + vm.url)
+</script>
+</body>
+</html>

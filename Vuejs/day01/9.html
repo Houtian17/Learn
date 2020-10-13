@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <p v-if="seen">现在您看我了</p>
+    <template v-if="ok">
+        <h1>菜鸟教程</h1>
+        <p>hhhhhhhhzb</p>
+        <p>hhhhhhhhhh</p>
+    </template>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            seen: true,
+            ok: true
+        }
+    })
+</script>
+</body>
+</html>
