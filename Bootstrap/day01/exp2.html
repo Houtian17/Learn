@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+
+    <ul class="nav nav-tabs " id="myTab">
+        <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+        <li><a href="#news" data-toggle="tab">news</a></li>
+        <li><a href="#blog" data-toggle="tab">blog</a></li>
+        <li><a href="#about" data-toggle="tab">about</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">home page</div>
+        <div class="tab-pane" id="news">news page</div>
+        <div class="tab-pane" id="blog">blog page</div>
+        <div class="tab-pane" id="about">about page</div>
+    </div>
+    <script>
+        $('#myTab a').click()(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    </script>
+</body>
+</html>
