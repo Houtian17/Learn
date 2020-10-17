@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <style>
+        .row {
+            margin-bottom: 15px;
+        }
+
+        [class*="col"] {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+    </style>
+</head>
+<body>
+<!--等宽布局-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            三分之一空间占位
+        </div>
+        <div class="col-sm">
+            三分之一空间占位
+        </div>
+        <div class="col-sm">
+            三分之一空间占位
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            1 of 2
+        </div>
+        <div class="col">
+            2 of 2
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3
+        </div>
+        <div class="col">
+            2 of 3
+        </div>
+        <div class="col">
+            3 of 3
+        </div>
+    </div>
+</div>
+<!--设置弹性空间-->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            1
+        </div>
+        <div class="col-6">
+            2 of 3 (更宽-12格中占6格，其它6格另外两列平分)
+        </div>
+        <div class="col">
+            3
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3
+        </div>
+        <div class="col-5">
+            2 of 3 (更宽-12格中占5格,其它7格另外两列平分-不论奇偶都能达成)
+        </div>
+        <div class="col">
+            3 of 3
+        </div>
+    </div>
+</div>
+<!--水平对齐-->
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
+            1 of 3
+        </div>
+        <div class="col-md-auto">
+            Variable width content
+        </div>
+        <div class="col col-lg-2">
+            3 of 3
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            1 of 3
+        </div>
+        <div class="col-md-auto">
+            Variable width content
+        </div>
+        <div class="col col-lg-2">
+            3 of 3
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">8</div>
+            <div class="col-4">4</div>
+        </div>
+    </div>
+
+    <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+            <div class="col py-3 px-lg-5 border bg-dark">Custom column padding</div>
+            <div class="col py-3 px-lg-5 border bg-danger">Custom column padding</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col">Colnum</div>
+            <div class="col">Colnum</div>
+            <div class="col">Colnum</div>
+            <div class="col">Colnum</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-3">
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+    </div>
+    <!--    换行-->
+    <div class="row">
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    </div>
+
+    <!--    顺序重定义-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1号空间-未定义序号，位置不变。
+            </div>
+            <div class="col order-12">
+                2号空间-排最后。
+            </div>
+            <div class="col order-1">
+                3号空间-放第1但受1号空间不变影响居第2位。
+            </div>
+        </div>
+    </div>
+
+    <!--    设置偏移-->
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 offset-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+    </div>
+
+    <!--    重置便宜-->
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
+        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6
+            .offset-lg-0
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            Level 1: .col-sm-9
+            <div class="row">
+                <div class="col-8 col-sm-6">
+                    Level 2: .col-8 .col-sm-6
+                </div>
+                <div class="col-4 col-sm-6">
+                    Level 2: .col-4 .col-sm-6
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
