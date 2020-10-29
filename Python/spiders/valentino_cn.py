@@ -11,7 +11,7 @@ from ..items import SKU
 
 class SitemapTemplateSpider(Spider):
     name = 'valentino_cn'
-    brand_name = 'valentino_cn'
+    brand_name = '华伦天奴'
     allowed_domains = ['valentino.cn', 'valentino.com']
     ql_url = 'https://www.valentino.cn/graphql'
 

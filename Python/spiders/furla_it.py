@@ -17,13 +17,13 @@ class SitemapTemplateSpider(SitemapSpider):
 
     def parse_sku(self, response: Response):
         code = response.css('div.product-number div::text').get()
-
+        price = {}
         price_eur = response.css('span.price-sales::text').get()
         if price_eur is not None and len(price_eur) > 1:
-            price_eur = price_eur.strip('€ ').replace(',', '')
+            price_eur = price_eur.strip('€ ').replace(',', '.')
             price = {
                 'eur': float(price_eur),
             }
 
-        sku = SKU(self.brand_name, '', '', code, '', response.url, price, '', {}, {})
+        sku = SKU(self.brand_name, '', '', code, '', response.url, price, '', [], {})
         yield sku
