@@ -12,11 +12,12 @@ from ..items import SKU
 class SitemapTemplateSpider(SitemapSpider):
     name = 'burberry_cn'
     brand_name = 'burberry_cn'
-    allowed_domains = ['burberry.com']
+    allowed_domains = ['burberry.cn', 'burberry.com']
     sitemap_urls = ['https://cn.burberry.com/sitemap-cn.xml']
     sitemap_rules = [
         (r'/[-\w]+-p[\d]+', 'parse_sku'),
     ]
+
     def parse_sku(self, response: Response):
         attrs = []
         image_urls = []
