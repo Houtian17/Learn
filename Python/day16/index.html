@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>个人简历</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+
+
+    <style type="text/css">
+        body {
+            font-family: 'microsoft yahei', Arial, sans-serif;
+        }
+
+        .cvheader {
+            border-bottom: 1px solid #DFDFDF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .cvheader h1 {
+            margin: 0;
+        }
+
+        .address {
+            background: #efb73e;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .cvbody {
+            padding-top: 50px;
+        }
+
+        .cbox {
+            margin-bottom: 30px;
+            color: #FFF;
+            padding: 50px;
+        }
+
+        /* 定义cbox颜色 */
+        .green {
+            background: #2ecc71;
+        }
+
+        .orange {
+            background: orange;
+        }
+
+        .red {
+            background: #dd4814;
+        }
+
+        .bbox {
+            border: 1px solid #DFDFDF;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            padding: 50px;
+        }
+
+        .footer {
+            margin: 30px 0 30px;
+            padding: 50px;
+            background: #CCC;
+            color: #FFF;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row cvheader" style="font-size:17px">
+        <div class="col-lg-7 col-md-7 col-xs-12" >
+
+            <!--个人简历姓名和职位 -->
+
+            <p  style="font-size: 36px" class="text-primary">周强</p>
+            <span class="glyphicon glyphicon-paperclip"></span>前端工程师 && UI设计师
+
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-xs-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-4">
+                    <p id="contact" class="address text-center">联系</p>
+                </div>
+                <div class="col-lg-8 col-md-8 col-xs-8">
+
+                    <!--邮箱、电话号码和地址 -->
+                    <p>
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        zhouqiang@qq.com
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        13970000000
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-road"></span>
+                        湖北省武汉市洪山区
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-xs-12">
+
+            <!--个人头像 -->
+            <img src="../img/personal.png" class="img-responsive">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row cvbody">
+
+        <div class="col-lg-6 col-md-6 col-xs-12">
+
+            <div class="row">
+                <div class="cbox green">
+                    <h4>个人介绍</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus asperiores eum
+                        consequatur hic rem earum repudiandae dicta! Est officiis similique fugiat quod quibusdam rerum
+                        ipsum eos soluta tempore cupiditate! Accusantium?
+                    </p>
+                </div>
+                <div class="cbox red">
+                    <h4>个人技能</h4>
+
+                    <!--个人技能 使用列表实现 -->
+                    <ul class="list-unstyled">
+                        <li>HTML/CSS/Javascript</li>
+                        <li>Java/J2EE</li>
+                        <li>数据库</li>
+                        <li>Photoshop/UI</li>
+                    </ul>
+
+                </div>
+                <div class="cbox orange container col-md-12">
+
+                    <h4>语言水平</h4>
+
+                    <!--语言水平 使用图片实现 -->
+                    <img src="../img/canvas.png" class="pull-left">
+                    <img src="../img/canvas.png" class="pull-right">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-1 col-md-1 col-xs-12"></div>
+
+        <div class="col-lg-5 col-md-5 col-xs-12">
+
+            <div class="row">
+                <div class="bbox">
+                    <h4>教育背景</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione enim adipisci minima
+                        perspiciatis ad nesciunt iure asperiores voluptatem neque aperiam molestias cupiditate facilis a
+                        eveniet iste sapiente ab repellendus dignissimos.</p>
+                </div>
+                <div class="bbox">
+                    <h4>工作经验</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolorem mollitia
+                        repellendus. Magni laudantium placeat repudiandae tempore iure deleniti obcaecati. Architecto
+                        delectus doloremque quo. Dicta ratione vero eos pariatur itaque.</p>
+                </div>
+                <div class="bbox">
+                    <h4>个人爱好</h4>
+
+                    <!--四种爱好-->
+
+                    <p><span class="glyphicon glyphicon-tree-deciduous"></span>骑马</p>
+                    <p><span class="glyphicon glyphicon-plane"></span>旅游</p>
+                    <p><span class="glyphicon glyphicon-cutlery">美食</span></p>
+                    <p><span class="glyphicon glyphicon-music"></span>音乐</p>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="footer text-center">关注-微博</div>
+    </div>
+</div>
+
+</body>
+</html>
