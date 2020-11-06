@@ -33,7 +33,7 @@ class Hero(object):
         if num == "1":
             self.show_all_items()
         else:
-            print("输入有误，请重新11输入")
+            print("输入有误，请重新输入")
 
 
 def main():
