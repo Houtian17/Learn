@@ -7,7 +7,7 @@ if __name__ == '__main__':
         # 添加一个key，为name，value，hbzb
         # res = sr.set('name', 'hbzb')
 
-        # 修改name的值为xjf
+        # 修改name的值为xjf.
         res = sr.set('name', 'xjf')
         print(res)
 
