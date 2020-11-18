@@ -11,7 +11,7 @@ if __name__ == '__main__':
         res = sr.set('name', 'xjf')
         print(res)
 
-        # 获取name的值
+        # 获取name的值.
         res = sr.get('name')
         print(res)
     except Exception as e:
