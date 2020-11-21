@@ -8,11 +8,15 @@ if __name__ == '__main__':
         # res = sr.set('name', 'hbzb')
 
         # 修改name的值为xjf.
-        res = sr.set('name', 'xjf')
-        print(res)
+        # res = sr.set('name', 'xjf')
+        # print(res)
 
         # 获取name的值.
-        res = sr.get('name')
+        # res = sr.get('name')
+        # print(res)
+
+        # 删除name 及其对应值
+        res = sr.delete('name')
         print(res)
     except Exception as e:
         print(e)
